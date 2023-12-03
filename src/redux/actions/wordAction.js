@@ -1,9 +1,9 @@
-import {WORD_LOADING_STATUS, WORD_SUCCESS_DATA, WORD_FAILURE_DATA} from './actionTypes.js';
+import {WORD_LOADING_STATUS, WORD_SUCCESS_DATA, WORD_FAILURE_DATA} from './actionTypes'
 import axios from 'axios';
 
 export const wordLoadingStatus= ()=>{
     return {
-        type: WORD_LOADING_STATUS
+       type: WORD_LOADING_STATUS
     }
 }
 export const wordSuccessData = (data)=>{

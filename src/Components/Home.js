@@ -4,7 +4,7 @@ import CurrentWordDetail from './CurrentWordDetail'
 const Home = () => {
   return (
     <div>
-        <SearchContainer/>
+         <SearchContainer/>
          <CurrentWordDetail/>
     </div>
   )

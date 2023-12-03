@@ -1,12 +1,20 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import { useSelector,useDispatch } from 'react-redux'
+
+import { useParams } from 'react-router-dom'
+import { getWordData} from '../redux/actions/wordAction'
 
 const History = () => {
-  let historyItems =[{ title: "hey"},{ title: "hi"},{ title: "hello"},{ title: "hola"}];
+  const searchHistory =useSelector(state=>state.historyReducer.searchHistory)
+  console.log(searchHistory)
   return (
     <div>
+       {/* <li key={ind}>
+                <Link to={`/${item}/`}>{item}</Link>
+            </li> */}
        <h3>Search History</h3>
-      { historyItems.length>0 && <ul>
-          {historyItems.map((item,index)=> <li key={index}><a href="#">{item.title}</a></li>)}
+      { searchHistory.length>0 && <ul>
+          {searchHistory.map((item,index)=> <li key={index}><a href="#">{item.title}</a></li>)}
        </ul>
       }
     </div>

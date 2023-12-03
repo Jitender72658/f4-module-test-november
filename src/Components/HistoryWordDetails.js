@@ -1,23 +1,14 @@
 import React, { useEffect } from 'react'
 import { useSelector,useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { getWordData } from '../redux/actions/wordAction';
 
   const HistoryWordDetails = () => {
-    const { word } = useParams();
-    const dispatch = useDispatch();
-      useEffect(() => {
-          // Dispatch the action to fetch word details when the component mounts
-          dispatch(getWordData(word));
-    }, [dispatch, word]);
+
   const selectData = state => state.wordReducer.data;
   const selecteddata = useSelector(selectData);
   const data=useSelector(state=>state.historyReducer.searchHistory)
-  console.log(data,'data')
-  console.log(selecteddata,'selectedData')
   return (
     <div>
-      <div className='display-div'>
+      <div className='history-word-details'>
       
       {selecteddata.length>0&&
       selecteddata.map((item, idx) => (

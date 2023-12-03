@@ -20,7 +20,6 @@ const SearchContainer = () => {
            dispatch(addToHistory(inputValue))
            setInputValue("");      
        }
-       console.log(data)
   return (
     <div className='searchContainer'>
         <input value={inputValue} onChange={(event)=>setInputValue(event.target.value)} placeholder="Search for any word .." />

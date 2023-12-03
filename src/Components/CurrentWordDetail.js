@@ -5,16 +5,18 @@ import { getWordData } from '../redux/actions/wordAction';
 
 
 const CurrentWordDetail = () => {
-         const selectLoading = state => state.loading;
-         const selectError = state => state.error;
+         const loadingStatus = state => state.loading;
+         const dataError = state => state.error;
          const selectData = state=> state.wordReducer.data; 
-         const loading = useSelector(selectLoading);
+         const loading = useSelector(loadingStatus);
          const data = useSelector(selectData);
-         const error = useSelector(selectError);
-         console.log(data);
+         const error = useSelector(dataError);
+         const hasContent = data.length > 0;
+         const containerStyle = {
+          backgroundColor: hasContent ? 'white' : 'transparent',
+        };
   return (
-    <div className='currentWordDetails'>
-      <h1>WordDetailPage</h1>
+    <div className='currentWordDetails' style={containerStyle}>
       {data.length>0 &&
       data.map((item, idx) => (
         <div key={idx}>

@@ -61,4 +61,33 @@ body{
 
 .currentWordDetails{
   background-color: white;
+  padding: 20px 40px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+.currentWordDetails div{
+  padding: 5px 0px;
+}
+.history-word-details{
+  background-color: white;
+  padding: 20px 40px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.history-word-details div{
+  padding: 5px 0px;
+}
+.historyContainer{
+  background-color: white;
+  padding: 20px 40px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.historyContainer li{
+    list-style-type: none;
+}
+.historyContainer a{
+  color: skyblue;
 }

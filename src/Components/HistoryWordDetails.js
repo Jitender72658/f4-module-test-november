@@ -17,7 +17,7 @@ import { useSelector,useDispatch } from 'react-redux';
             <p>{item.phonetic}</p>
             {item.phonetics.map((phone,ind)=>(
               <div key={ind}>
-                    <audio controls><source src={phone.audio} type="audio/mp3" /></audio>
+                    <audio className="audioContainer" controls><source src={phone.audio} type="audio/mp3" /></audio>
                     <p>{phone.text}</p>
                 </div>
             ))}

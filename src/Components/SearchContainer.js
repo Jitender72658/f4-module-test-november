@@ -17,7 +17,8 @@ const SearchContainer = () => {
        function handleSearch(e){
            e.preventDefault();
            dispatch(getWordData(inputValue)) 
-           dispatch(addToHistory(inputValue))       
+           dispatch(addToHistory(inputValue))
+           setInputValue("");      
        }
        console.log(data)
   return (

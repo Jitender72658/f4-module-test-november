@@ -10,11 +10,11 @@ const History = () => {
   return (
     <div>
        {/* <li key={ind}>
-                <Link to={`/${item}/`}>{item}</Link>
+                <Link to={`}>{item}</Link>
             </li> */}
        <h3>Search History</h3>
       { searchHistory.length>0 && <ul>
-          {searchHistory.map((item,index)=> <li key={index}><a href="#">{item.title}</a></li>)}
+          {searchHistory.map((item,index)=> <li key={index}><a href={`/details`}>{item}</a></li>)}
        </ul>
       }
     </div>

@@ -1,9 +1,12 @@
 import Navbar from "./Components/Navbar";
-import store from '../src/redux/store.js';
+import WordDisplay from "./Components/WordDisplay.js";
+import SearchContainer from "./Components/SearchContainer.js";
 function App() {
   return (
     <div className="App">
-         <Navbar></Navbar>
+         <Navbar/>
+         <SearchContainer/>
+         <WordDisplay/>
     </div>
   );
 }

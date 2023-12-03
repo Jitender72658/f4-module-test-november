@@ -1,7 +1,7 @@
-import {createStore} from "redux";
-// import {STORE} from './actionTypes.js';
-import counterReducer from "./reducers/counterReducer.js";
+import {createStore,applyMiddleware} from "redux";
+import wordReducer from "./reducers/wordReducer.js";
+import thunk from "redux-thunk";
 
-const  store = createStore(counterReducer);
+const  store = createStore(wordReducer,applyMiddleware(thunk));
 
 export default store;

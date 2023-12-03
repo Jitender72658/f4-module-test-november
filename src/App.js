@@ -1,12 +1,17 @@
 import Navbar from "./Components/Navbar";
-import WordDisplay from "./Components/WordDisplay.js";
-import SearchContainer from "./Components/SearchContainer.js";
-function App() {
+import Home from "./Components/Home";
+import History from "./Components/History";
+import HistoryWordDetails  from './Components/HistoryWordDetails';
+import { Router, Route,Routes } from 'react-router-dom';
+const App = ()=> {
   return (
     <div className="App">
          <Navbar/>
-         <SearchContainer/>
-         <WordDisplay/>
+         <Routes>
+                 <Route path="/" element={<Home/>} />
+                 <Route path="/history" element={<History/>} />
+                 <Route path='/details' element={<HistoryWordDetails/>}/>
+         </Routes>
     </div>
   );
 }

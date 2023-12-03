@@ -59,4 +59,6 @@ body{
    border: none;
 }
 
-
+.currentWordDetails{
+  background-color: white;
+}

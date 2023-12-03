@@ -19,10 +19,10 @@ export const wordFailureData = (error)=>{
     }
 }
 
-export const getData = ()=>{
+export const getWordData = (word)=>{
     return (dispatch)=>{
         dispatch(wordLoadingStatus());
-        axios.get("https://api.dictionaryapi.dev/api/v2/entries/en/hello")
+        axios.get(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`)
         .then(result=> dispatch(wordSuccessData( result.data)))
         .catch(error=> dispatch(wordFailureData(error.message)));
     }
